@@ -1,5 +1,21 @@
+# Arquivos de log
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependências (essencial!)
+/node_modules
+
+# Arquivos de ambiente (essencial para segurança!)
 .env
-
-node_modules/
-
+.env.local
 .env.example
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Outros
+.DS_Store
