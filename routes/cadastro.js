@@ -17,14 +17,10 @@ router.get("/", authMiddleware, async (req, res) => {
 });
 
 router.post("/register", async (req, res) => {
-  const { nome, email, senha, confirmarSenha } = req.body;
+  const { nome, email, senha } = req.body;
   
-  if (!nome || !email || !senha || !confirmarSenha) {
+  if (!nome || !email || !senha) {
     return res.status(400).json({ error: "Dados incompletos" });
-  }
-
-  if (senha !== confirmarSenha) {
-    return res.status(400).json({ error: "As senhas não conferem" });
   }
 
   try {
